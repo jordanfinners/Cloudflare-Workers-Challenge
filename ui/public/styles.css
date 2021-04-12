@@ -1,0 +1,150 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('./Inter.ttf') format('woff2 supports variations'), url('./Inter.ttf') format('woff2-variations');
+  font-weight: 100 400 900;
+  font-display: swap;
+}
+
+html,
+:host > * {
+  --black: #023047;
+  --blue: #219ebc;
+  --orange: #ffb703;
+  --grey: #e5e5e5ff;
+  --white: #ffff;
+}
+
+[hidden] {
+  display: none;
+}
+
+body {
+  margin: 0;
+  padding: 25px;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+  background-color: var(--white);
+  color: var(--black);
+}
+
+main {
+  min-height: 75vh;
+  max-width: 700px;
+  margin: auto;
+}
+
+a {
+  color: var(--black);
+  text-decoration-color: var(--orange);
+}
+
+footer {
+  margin: 75px 0 0 0;
+  font-size: 10px;
+}
+
+time {
+  font-weight: 100;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+input {
+  border: 1px solid var(--grey);
+  border-radius: 3px;
+  background: var(--white);
+  padding: 10px;
+}
+
+input::placeholder {
+  color: var(--grey);
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--orange);
+  -webkit-transition: border-color ease 300ms;
+  transition: border-color ease 300ms;
+}
+
+button {
+  background: var(--blue);
+  color: var(--white);
+  border-radius: 32px;
+  padding: 10px 15px;
+  border: none;
+  text-align: center;
+  font-size: 15px;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+p > img {
+  width: 100%;
+}
+
+header {
+  display: flex;
+}
+
+header > nav {
+  display: flex;
+  margin: auto 0 auto auto;
+}
+
+header > nav > a {
+  text-decoration: none;
+}
+
+header > nav > a > picture > img {
+  margin: 10px;
+}
+
+header > nav > a > picture > img.github {
+  height: 25px;
+  width: 61px;
+}
+
+header > nav > a > picture > img.twitter {
+  height: 25px;
+  width: 30px;
+}
+
+a:hover {
+  color: var(--orange);
+}
+
+header > nav > a:first-of-type {
+  margin: auto 0 auto auto;
+}
+
+section.hero > h1 {
+  margin: 50px 0;
+}
+
+section.hero > p {
+  margin: 10px 0;
+}
+
+div#events > div.event > h3 {
+  color: var(--blue);
+}
+
+div#events > div.event {
+  border-bottom: 1px solid var(--grey);
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--black);
+    color: var(--white);
+  }
+
+  a {
+    color: var(--white);
+  }
+}

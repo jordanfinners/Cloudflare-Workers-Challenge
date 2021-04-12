@@ -1,0 +1,7 @@
+name = "cloudflare-challenge-api"
+type = "javascript"
+account_id = "3bfe7ad335003f84c4a9959ad57216de"
+workers_dev = true
+kv_namespaces = [
+    { binding = "EVENTS", id = "430fcf4eac5847a58de9e1331064cf88" }
+]

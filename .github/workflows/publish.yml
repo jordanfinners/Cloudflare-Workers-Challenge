@@ -1,0 +1,34 @@
+name: deploy
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+
+    - name: Node JS Setup
+      uses: actions/setup-node@v1
+      with:
+        node-version: '14.x'
+
+    - name: Install
+      run: npm install
+
+    - name: Lint
+      run: npm run lint
+      
+    - name: Publish UI
+      uses: cloudflare/wrangler-action@1.3.0
+      with:
+        apiToken: ${{ secrets.CF_API_TOKEN }}
+        workingDirectory: ui
+    
+    - name: Publish API
+      uses: cloudflare/wrangler-action@1.3.0
+      with:
+        apiToken: ${{ secrets.CF_API_TOKEN }}
+        workingDirectory: api

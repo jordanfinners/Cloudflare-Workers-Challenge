@@ -1,0 +1,7 @@
+name = "cloudflare-challenge-ui"
+type = "webpack"
+account_id = "3bfe7ad335003f84c4a9959ad57216de"
+workers_dev = true
+
+[site]
+bucket = "./public"
