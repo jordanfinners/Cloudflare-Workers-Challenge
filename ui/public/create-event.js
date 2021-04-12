@@ -115,6 +115,7 @@ class CreateEvent extends HTMLElement {
       this.status.textContent = '😔 Fail, we weren\'t able to save your event.';
       return;
     }
+    this.status.textContent = ''
     return;
   }
 
