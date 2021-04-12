@@ -45,7 +45,7 @@ class EventsList extends HTMLElement {
     const nameElement = document.createElement('h3');
     nameElement.className = 'name';
     nameElement.textContent = title;
-    
+
     const dateElement = document.createElement('p');
     dateElement.className = 'date';
     dateElement.textContent = `Held on ${new Date(date)}`;
@@ -101,7 +101,7 @@ class EventsList extends HTMLElement {
       status.className = 'status';
       status.textContent = 'There are no events near you yet, create your own below.';
       this.appendChild(status);
-      return
+      return;
     }
 
     this.events.forEach((event) => {

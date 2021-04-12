@@ -2,7 +2,7 @@ import {getFormJSON} from './forms.js';
 class CreateEvent extends HTMLElement {
   constructor() {
     super();
-    this._render()
+    this._render();
   }
 
   get isLoading() {
@@ -128,7 +128,7 @@ class CreateEvent extends HTMLElement {
     const button = document.createElement('button');
     button.type = 'submit';
     button.textContent = 'Save my event';
-    
+
     const cancel = document.createElement('button');
     cancel.type = 'reset';
     cancel.textContent = 'Cancel';
